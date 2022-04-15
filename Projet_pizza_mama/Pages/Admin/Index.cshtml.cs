@@ -11,9 +11,15 @@ namespace Projet_pizza_mama.Pages.Admin
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
+        //lorsque on c'est authentier on nous renvoie dans l'index de pizzas 
+        public IActionResult OnGet()
         {
-            Console.WriteLine();
+            //renvoie la page pizza si on est connecter 
+            if(HttpContext.User.Identity.IsAuthenticated)
+            {
+                return Redirect("/Admin/Pizzas" );
+            }
+            return Page();
         }
         //permet de verifier les coordonnées rentées pour ce connecter ou non 
         public async Task<IActionResult> OnPostAsync(string username, string passward, string ReturnUrl)
@@ -34,6 +40,12 @@ namespace Projet_pizza_mama.Pages.Admin
 
                 return Page();
             
+        }
+
+        public async Task<IActionResult> OnGetLogout()
+        {
+            await HttpContext.SignOutAsync();
+            return Redirect("/Admin");
         }
     }
 }
