@@ -1,0 +1,43 @@
+﻿@page
+@model Projet_pizza_mama.Pages.Admin.Pizzas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pizza</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.prix)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.prix)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.vegetarienne)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.vegetarienne)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pizza.ingredients)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pizza.ingredients)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Pizza.PizzaID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

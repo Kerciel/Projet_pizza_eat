@@ -1,0 +1,50 @@
+﻿@page
+@model Projet_pizza_mama.Pages.Admin.Pizzas.EditModel
+
+@{
+    ViewData["Title"] = "Editer";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Pizza</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Pizza.PizzaID" />
+            <div class="form-group">
+                <label asp-for="Pizza.nom" class="control-label"></label>
+                <input asp-for="Pizza.nom" class="form-control" />
+                <span asp-validation-for="Pizza.nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pizza.prix" class="control-label"></label>
+                <input asp-for="Pizza.prix" class="form-control" />
+                <span asp-validation-for="Pizza.prix" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Pizza.vegetarienne" /> @Html.DisplayNameFor(model => model.Pizza.vegetarienne)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pizza.ingredients" class="control-label"></label>
+                <input asp-for="Pizza.ingredients" class="form-control" />
+                <span asp-validation-for="Pizza.ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Editer" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Revenir à la liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
