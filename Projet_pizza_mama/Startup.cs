@@ -33,7 +33,11 @@ namespace Projet_pizza_mama
             });
             //IOC -> creer des instances ou conserver des instances 
             services.AddDbContext<DataContext>(options =>options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //pour utiliser les fonctionnaliters de RAZORPAGES
             services.AddRazorPages();
+
+            //pour utiliser les fonctionnaliters des Controllers
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +65,7 @@ namespace Projet_pizza_mama
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

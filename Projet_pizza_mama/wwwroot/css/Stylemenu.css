@@ -1,0 +1,54 @@
+﻿body {
+    background: url("/images/menupizza.jpg") no-repeat;
+    background-size: cover;
+    font-family: 'Kalam', cursive;
+}
+
+li {
+    color: #DC8D2D;
+    list-style-type: none;
+
+}
+span{
+    color:#ffffff;
+}
+
+.ingrediants {
+    color: #808080;
+    margin-bottom: 30px;
+    width:400px;
+
+}
+a {
+    color: #DC8D2D;
+    text-decoration: none;
+    padding: 6px 7px 3px 6px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 1.5s;
+}
+    a:hover {
+        color: #ffffff;
+        background-color: #DC8D2D;
+        border: 1px solid #ffffff;
+    }
+
+.img-main {
+    height:100px;
+    width:100px;
+  
+
+}
+img {
+    display:block;
+    object-fit:cover;
+}
+h1 {
+    color: #DC8D2D;
+}
+
+.vegeratienne {
+    background-color: #DC8D2D;
+    color: black;
+    font-size: 10px;
+} 

@@ -5,7 +5,13 @@
 
 <h1>Vous devez vous authentifier</h1>
 <br />
-
+@if(Model.erreur == true)
+{
+<div class="alert alert-danger" role="alert">
+ ERREUR : Ce compte n'existe pas!
+</div>
+}
+<br />
 <form method="post">
  <input type="text" name="username" placeholder="Login"><br /><br />
  <input type="password" name="password" placeholder="Mot de passe"><br /><br />
