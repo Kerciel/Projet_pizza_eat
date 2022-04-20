@@ -32,7 +32,8 @@ namespace Projet_pizza_mama
                 options.LoginPath = "/Admin";
             });
             //IOC -> creer des instances ou conserver des instances 
-            services.AddDbContext<DataContext>(options =>options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<DataContext>(options =>options.UseSqlite(Configuration.GetConnectionString("DefaultConnectionSQlite"))); SQLITE
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             //pour utiliser les fonctionnaliters de RAZORPAGES
             services.AddRazorPages();
 
