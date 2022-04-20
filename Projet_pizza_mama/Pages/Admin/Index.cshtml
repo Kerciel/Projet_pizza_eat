@@ -2,7 +2,10 @@
 @model Projet_pizza_mama.Pages.Admin.IndexModel
 @{
 }
-
+@if (Model.isdevelopement == true)
+{
+    <p>MODE DEVELOPEMENT</p>
+}
 <h1>Vous devez vous authentifier</h1>
 <br />
 @if(Model.erreur == true)

@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -14,11 +16,20 @@ namespace Projet_pizza_mama.Pages.Admin
     public class IndexModel : PageModel
     {
         public bool erreur = false;
+        public bool isdevelopement = false;
         IConfiguration configuration;
         //recuperéation des information de connexion de l'administateur 
-        public IndexModel(IConfiguration configuration)
+        public IndexModel(IConfiguration configuration, IWebHostEnvironment env)
         {
             this.configuration = configuration;
+            if (env.IsDevelopment())
+            {
+                isdevelopement = true;
+            }
+            else
+            {
+                isdevelopement = false;
+            }
         }
         //lorsque on c'est authentier on nous renvoie dans l'index de pizzas 
         public IActionResult OnGet()
