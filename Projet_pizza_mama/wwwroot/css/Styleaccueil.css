@@ -1,30 +1,26 @@
 ﻿body {
-    background: url("/images/main_background.jpg") ;
+    background: url("/images/main_background.jpg") no-repeat ;
     background-size: cover;
-    font-family: 'Kalam', cursive;
+    
 }
-a {
-    color: #DC8D2D;
-    text-decoration: none;
+.btnperso {
     padding: 6px 7px 3px 6px;
-    background-color: #ffffff;
+    background-color: #DC8D2D;
     border-radius: 10px;
-    transition:all 1.5s;
+    transition: all 1.5s;
+    color: #FFFFFF;
+    font-size: 150%;
+    
 }
 
-    a:hover {
-        color: #ffffff;
-        background-color: #DC8D2D;
-        border: 1px solid #ffffff;
+    .btnperso:hover {
+        background-color: #ffffff;
+        color: #DC8D2D;
+        border: 1px solid #DC8D2D;
     }
 
-div {
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-img{
-    margin-top:20%;
+
+h1 {
+    font-size: 300%;
+    color: white;
 }

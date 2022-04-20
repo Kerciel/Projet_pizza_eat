@@ -8,12 +8,23 @@
     <head>
         <title>PizzaMama</title>
         <link rel="stylesheet" href="~/css/Styleaccueil.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
     </head>
-    <body>
-            <div class="text-center">
-                <img src="/images/main_logo.png" />
-                <a asp-page="/MenuPizzas">Voir le menu des pizzas</a>
-            </div>
+    <body class="container">
+            
+                <div class="row" >
+                    <div class="col-12 text-center" ><h1>PIZZA-EAT</h1></div>
+                </div>
+
+                <div class="row"><div class="col-12 text-center "><a asp-page="/MenuPizzas" class="text-decoration-none texte-center btnperso">Voir le menu des pizzas</a></div></div>
+
+            
+
+
+            <!--Script-->
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 
