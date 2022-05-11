@@ -1,7 +1,6 @@
 ﻿body {
-    background: url("/images/main_background.jpg") no-repeat ;
+    background: url("../images/contact.jpg");
     background-size: cover;
-    
 }
 .btnperso {
     padding: 6px 7px 3px 6px;
@@ -10,19 +9,9 @@
     transition: all 1.5s;
     color: #FFFFFF;
     font-size: 150%;
-    
 }
 
     .btnperso:hover {
         background-color: #ffffff;
         color: #DC8D2D;
-        border: 1px solid #DC8D2D;
-    }
-
-
-h1 {
-    font-size: 300%;
-    color: white;
-}
-
-
+      

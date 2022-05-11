@@ -26,7 +26,7 @@ namespace Projet_pizza_mama.Models
         [JsonIgnore]
         public string ingredients { get; set; }
 
-        [NotMapped]//ignorer apreso sa et ne la stoque pas dans la basse de données
+        [NotMapped]//ignorer apres sa et ne la stoque pas dans la basse de données
         [JsonPropertyName("ingredients")]//change le nom de ingredients par le tableau de pizza
 
         public string[] ingredientsList

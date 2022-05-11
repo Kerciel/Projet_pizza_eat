@@ -20,6 +20,10 @@ span {
     width: 400px;
     font-size: 150%;
 }
+.ingrediants:hover {
+    color:#ffffff;
+
+}
 .btnperso {
     padding: 6px 7px 3px 6px;
     background-color: #DC8D2D;
