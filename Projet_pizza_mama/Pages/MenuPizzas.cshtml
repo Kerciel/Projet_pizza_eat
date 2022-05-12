@@ -29,8 +29,12 @@
                 {
                 <span class="vegeratienne">VEGETARIENNE</span>
                 } 
+
                 </li>
-                <li class="ingrediants">@Html.DisplayFor(modelItem => item.ingredients) </li>
+                <a  class="text-decoration-none mt-2 btnperso" asp-page="/Pizza" asp-route-id="@item.PizzaID">Voir plus</a>
+                <li class="ingrediants">@Html.DisplayFor(modelItem => item.ingredients) </li> 
+
+                
               
              }
              <!--Le bouton pour revenr à la page d'aceuil-->
